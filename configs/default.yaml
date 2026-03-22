@@ -1,0 +1,30 @@
+data:
+  path: data/demo_synthetic_shipments.csv
+  date_column: ship_date
+  distance_column: distance_miles
+  weight_column: tractor_weight_lbs
+  carrier_column: carrier_group
+  id_column: shipment_id
+
+split:
+  train_fraction: 0.67
+
+cost:
+  max_gross_weight_lbs: 80000
+  underage_cost_per_lb_mile: 0.00005
+  overage_cost_per_lb: 0.023
+
+methods:
+  n_levels: 3
+  target_percentiles: [0.25, 0.5, 0.75]
+
+dta:
+  epsilon: 0.1
+  gamma: 0.99
+  bootstrap_episodes: 500
+  tractor_bin_width_lbs: 500
+  extra_inventory_per_level: 0
+  random_seed: 42
+
+paths:
+  outputs_dir: outputs/generated

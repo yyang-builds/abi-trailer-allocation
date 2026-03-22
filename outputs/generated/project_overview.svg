@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">ABI Trailer Allocation Project Overview</title>
+  <desc id="desc">Overview diagram showing uncertain tractor weight, modeling approaches, and reinforcement learning based dynamic trailer assignment.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 18; ry: 18; }
+      .accent { fill: #eff6ff; stroke: #60a5fa; stroke-width: 2; rx: 18; ry: 18; }
+      .rl { fill: #ecfeff; stroke: #06b6d4; stroke-width: 2.5; rx: 18; ry: 18; }
+      .title { font: 700 30px Arial, sans-serif; fill: #0f172a; }
+      .label { font: 700 20px Arial, sans-serif; fill: #0f172a; }
+      .body { font: 400 16px Arial, sans-serif; fill: #334155; }
+      .small { font: 600 15px Arial, sans-serif; fill: #0f172a; }
+      .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="320"/>
+  <text class="title" x="60" y="56">Trailer Loading Under Uncertainty</text>
+
+  <rect class="panel" x="60" y="90" width="260" height="160"/>
+  <text class="label" x="84" y="128">Problem</text>
+  <text class="body" x="84" y="158">Trailers must be pre-loaded before</text>
+  <text class="body" x="84" y="182">tractors arrive, but tractor weights</text>
+  <text class="body" x="84" y="206">are uncertain and affect mismatch cost.</text>
+
+  <rect class="accent" x="390" y="90" width="300" height="160"/>
+  <text class="label" x="414" y="128">Static Methods</text>
+  <text class="body" x="414" y="158">Newsvendor benchmark</text>
+  <text class="body" x="414" y="182">Sample Average Approximation</text>
+  <text class="body" x="414" y="206">Empirical Risk Minimization</text>
+
+  <rect class="rl" x="760" y="90" width="360" height="160"/>
+  <text class="label" x="784" y="128">Reinforcement Learning Focus</text>
+  <text class="body" x="784" y="158">Dynamic Trailer Assignment (DTA)</text>
+  <text class="body" x="784" y="182">Q-learning uses realized tractor weight</text>
+  <text class="body" x="784" y="206">and remaining inventory to assign trailers.</text>
+
+  <path class="arrow" d="M 320 170 L 390 170"/>
+  <path class="arrow" d="M 690 170 L 760 170"/>
+
+  <text class="small" x="788" y="250">Goal: lower mismatch cost through operational flexibility.</text>
+</svg>

@@ -1,0 +1,9 @@
+inherits: configs/default.yaml
+
+experiment:
+  name: public_demo
+  description: Public-safe synthetic demonstration of the trailer allocation pipeline.
+
+dta:
+  bootstrap_episodes: 750
+  extra_inventory_per_level: 1

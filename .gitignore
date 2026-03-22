@@ -1,0 +1,31 @@
+.DS_Store
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Local or proprietary data should stay out of git.
+data/private/
+data/raw/
+data/interim/
+data/*.xlsx
+data/*.xls
+data/*.parquet
+data/*.feather
+data/*.pkl
+
+# Generated outputs.
+outputs/generated/*.csv
+outputs/generated/*.json
+outputs/generated/*.xlsx
+outputs/*.png
+outputs/*.csv
+outputs/*.json
+outputs/*.xlsx
