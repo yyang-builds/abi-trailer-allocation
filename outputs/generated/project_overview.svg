@@ -23,9 +23,9 @@
 
   <rect class="panel" x="60" y="90" width="260" height="160"/>
   <text class="label" x="84" y="128">Problem</text>
-  <text class="body" x="84" y="158">Trailers must be pre-loaded before</text>
-  <text class="body" x="84" y="182">tractors arrive, but tractor weights</text>
-  <text class="body" x="84" y="206">are uncertain and affect mismatch cost.</text>
+  <text class="body" x="84" y="158">Trailers are pre-loaded before</text>
+  <text class="body" x="84" y="182">tractors arrive, while tractor</text>
+  <text class="body" x="84" y="206">weights remain uncertain.</text>
 
   <rect class="accent" x="390" y="90" width="300" height="160"/>
   <text class="label" x="414" y="128">Static Methods</text>
@@ -36,11 +36,11 @@
   <rect class="rl" x="760" y="90" width="360" height="160"/>
   <text class="label" x="784" y="128">Reinforcement Learning Focus</text>
   <text class="body" x="784" y="158">Dynamic Trailer Assignment (DTA)</text>
-  <text class="body" x="784" y="182">Q-learning uses realized tractor weight</text>
-  <text class="body" x="784" y="206">and remaining inventory to assign trailers.</text>
+  <text class="body" x="784" y="182">Q-learning uses realized tractor</text>
+  <text class="body" x="784" y="206">weight and inventory to assign trailers.</text>
+  <text class="small" x="784" y="234">Goal: reduce mismatch cost.</text>
 
   <path class="arrow" d="M 320 170 L 390 170"/>
   <path class="arrow" d="M 690 170 L 760 170"/>
 
-  <text class="small" x="788" y="250">Goal: lower mismatch cost through operational flexibility.</text>
 </svg>
