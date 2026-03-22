@@ -10,11 +10,11 @@ This public repository reorganizes dissertation-era code into a modular, reprodu
 
 ## Problem Statement
 
-This project studies ABI's trailer loading and shipment problem when trailers must be pre-loaded before tractors arrive, while tractor weights remain uncertain. The operational challenge is to balance under-loading costs against overweight rework costs under a fixed gross-weight limit.
+This project studies the trailer shipment problem faced by ABI. The key challenge is to determine the proper weight of products loaded on a trailer while meeting the gross weight limit regulation, even though tractor weight is varying and unknown at the time when trailers are pre-loaded. This creates a trade-off between overloading, which leads to scaleback and rework cost, and underloading, which leads to opportunity cost from not fully utilizing trailer capacity.
 
 ## Key Results
 
-The repository highlights the progression from static optimization methods to reinforcement learning-based dynamic trailer assignment. In the original research, the reinforcement learning component is the most distinctive contribution because it uses realized tractor information and remaining inventory to improve assignment decisions.
+The main finding is that reinforcement learning-based dynamic trailer assignment can significantly outperform static loading rules. In the dissertation, DTA achieved the best performance among the tested methods by using both diversification of trailer weights and dynamic use of updated tractor information. More broadly, the results highlight the operational value of flexibility in trailer shipment planning and show how dynamic assignment can reduce mismatch cost more effectively than purely static approaches.
 
 ![Method Cost Comparison](outputs/generated/method_cost_comparison.png)
 
@@ -24,15 +24,7 @@ The repository highlights the progression from static optimization methods to re
 
 ## Methods
 
-The project implements four methods motivated by the dissertation and publication:
-
-- a Newsvendor benchmark
-- sample average approximation (SAA)
-- empirical risk minimization (ERM)
-- dynamic trailer assignment (DTA) with Q-learning
-- configurable experiments
-- public-safe synthetic demo data
-- evaluation and visualization utilities
+This repository implements the main methodologies developed in the dissertation. As a benchmark, the Newsvendor method is used to determine trailer load size under uncertainty. Sample Average Approximation (SAA) and Empirical Risk Minimization (ERM) provide data-driven approaches for optimizing trailer weight using historical observations and shipment features. The central contribution is Dynamic Trailer Assignment (DTA), a reinforcement learning approach based on Q-learning that dynamically assigns pre-loaded trailers using realized tractor weight information and current trailer inventory.
 
 The repository does not include proprietary ABI shipment data, private spreadsheets, or unrelated legacy files from the original working directory.
 
@@ -81,14 +73,6 @@ abi-trailer-allocation/
 ├── outputs/
 └── tests/
 ```
-
-## Legacy-To-New Mapping
-
-- legacy repeated monthly scripts -> `src/abi_trailer/methods/` plus config-driven scripts
-- ad hoc cost formulas -> `src/abi_trailer/cost.py`
-- notebook-only experiments -> `src/abi_trailer/evaluation.py` and `scripts/`
-- mixed training/test spreadsheets -> documented schema in `data/README.md`
-- Gurobi-only ERM prototype -> open-source `scipy.optimize.linprog` implementation
 
 ## Quick Start
 
